@@ -65,6 +65,7 @@ console.group(
 }
 console.groupEnd();
 
+// VARIANTAS ar geras ?
 console.group('5. Parašykite funkciją, kuri atspausdina masyvo elementus atbuline tvarka eilutėmis, iš galo.');
 {
   function solution(arr: any[]): void {
@@ -98,9 +99,18 @@ console.group('6. Parašykite funkciją, kuri atspausdina kiekvieno masyvo eleme
 }
 console.groupEnd();
 
+// PASIKLAUSTI
 console.group('7. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento reikšmes vienoje eilutėje: -111 2 -9 48 ...');
 {
-  // Užduoties sprendimas ir užduoties sprendimo atspausdinimas su duomenimis
+  function solutionInlineValues(arr: any[]): void {
+    const oneLineValue = arr.reverse().join(' ');
+    console.log(oneLineValue);
+  }
+
+  console.log('Numbers');
+  solutionInlineValues(numbers);
+  console.log('Words');
+  solutionInlineValues(words);
 }
 console.groupEnd();
 
@@ -109,7 +119,15 @@ console.group(
 );
 //  [0]=>17, [1]=>8, [2]=>88 ..
 {
-  // Užduoties sprendimas ir užduoties sprendimo atspausdinimas su duomenimis
+  function InlineValuesWithIndex(arr: any[]): void {
+    const oneLineValueIndex = arr.map((value, i) => `[${i}]=>${value}`).join(' ');
+    console.log(oneLineValueIndex);
+  }
+
+  console.log('Numbers');
+  InlineValuesWithIndex(numbers);
+  console.log('Words');
+  InlineValuesWithIndex(words);
 }
 console.groupEnd();
 
@@ -117,7 +135,12 @@ console.group(
   '9. Sukurkite funkciją, kuri priima skaičių masyvą ir grąžina naują masyvą sudarytą iš pradinio masyvo elementų padaugintų iš 2'
 );
 {
-  // Užduoties sprendimas ir užduoties sprendimo atspausdinimas su duomenimis
+  function doubleNumArr(arr: number[]): number[] {
+    return arr.map((value) => value * 2);
+  }
+  console.log('Numbers');
+  const ats = doubleNumArr(numbers);
+  console.log(ats);
 }
 console.groupEnd();
 
@@ -125,7 +148,12 @@ console.group(
   '10. Sukurkite funkciją, kuri priima skaičių masyvą ir grąžina naują masyvą sudarytą iš pradinio masyvo elementų pakeltų kvadratu'
 );
 {
-  // Užduoties sprendimas ir užduoties sprendimo atspausdinimas su duomenimis
+  function squareNumArr(arr: number[]): number[] {
+    return arr.map((value) => value ** 2);
+  }
+  console.log('Numbers');
+  const ats = squareNumArr(numbers);
+  console.log(ats);
 }
 console.groupEnd();
 
@@ -133,7 +161,12 @@ console.group(
   '11. Sukurkite funkciją, kuri priima skaičių masyvą ir grąžina naują masyvą sudarytą iš pradinio masyvo elementų ir jų indeksų sandaugos'
 );
 {
-  // Užduoties sprendimas ir užduoties sprendimo atspausdinimas su duomenimis
+  function indexNumMultiply(arr: number[]): number[] {
+    return arr.map((value, i) => value * i);
+  }
+  console.log('Numbers');
+  const ats = indexNumMultiply(numbers);
+  console.log(ats);
 }
 console.groupEnd();
 
@@ -141,7 +174,12 @@ console.group(
   '12. Sukurkite funkciją, kuri priima skaičių masyvą ir grąžina naują masyvą sudarytą iš pradinio masyvo teigiamų elementų'
 );
 {
-  // Užduoties sprendimas ir užduoties sprendimo atspausdinimas su duomenimis
+  function onlyPositiveNum(arr: number[]): number[] {
+    return arr.filter((value) => value > 0);
+  }
+  console.log('Numbers');
+  const ats = onlyPositiveNum(numbers);
+  console.log(ats);
 }
 console.groupEnd();
 
@@ -149,7 +187,12 @@ console.group(
   '13. Sukurkite funkciją, kuri priima skaičių masyvą ir grąžina naują masyvą sudarytą iš pradinio masyvo NE-teigiamų elementų'
 );
 {
-  // Užduoties sprendimas ir užduoties sprendimo atspausdinimas su duomenimis
+  function onlyNegativeNum(arr: number[]): number[] {
+    return arr.filter((value) => value < 0);
+  }
+  console.log('Numbers');
+  const ats = onlyNegativeNum(numbers);
+  console.log(ats);
 }
 console.groupEnd();
 
@@ -157,7 +200,12 @@ console.group(
   '14. Sukurkite funkciją, kuri priima skaičių masyvą ir grąžina naują masyvą sudarytą iš pradinio masyvo lyginių elementų'
 );
 {
-  // Užduoties sprendimas ir užduoties sprendimo atspausdinimas su duomenimis
+  function onlyLiginiai(arr: number[]): number[] {
+    return arr.filter((value) => value % 2 === 0);
+  }
+  console.log('Numbers');
+  const ats = onlyLiginiai(numbers);
+  console.log(ats);
 }
 console.groupEnd();
 
@@ -165,7 +213,12 @@ console.group(
   '15. Sukurkite funkciją, kuri priima skaičių masyvą ir grąžina naują masyvą sudarytą iš pradinio masyvo nelyginių elementų'
 );
 {
-  // Užduoties sprendimas ir užduoties sprendimo atspausdinimas su duomenimis
+  function onlyNeliginiai(arr: number[]): number[] {
+    return arr.filter((value) => value % 2 !== 0);
+  }
+  console.log('Numbers');
+  const ats = onlyNeliginiai(numbers);
+  console.log(ats);
 }
 console.groupEnd();
 
@@ -173,6 +226,11 @@ console.group(
   '16. Sukurkite funkciją, kuri priima skaičių masyvą ir grąžina naują masyvą sudarytą iš pradinio masyvo, paverstų teigiamais, elementų'
 );
 {
-  // Užduoties sprendimas ir užduoties sprendimo atspausdinimas su duomenimis
+  function changedToPositives(arr: number[]): number[] {
+    return arr.map((value) => (value < 0 ? -value : value));
+  }
+  console.log('Numbers');
+  const ats = changedToPositives(numbers);
+  console.log(ats);
 }
 console.groupEnd();
